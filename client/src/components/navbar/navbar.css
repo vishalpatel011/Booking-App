@@ -1,0 +1,67 @@
+.navbar {
+  height: 50px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+}
+
+.greeting, .navButton {
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #024198ed;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.greeting:hover, .navButton:hover {
+  background-color: #024098;
+}
+
+.username {
+  background-color: #ffffff;
+  color: #003580;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.logoutButton, .navButton {
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #003580;
+  background-color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logoutButton:hover, .navButton:hover {
+  background-color: #e7e4dce7;
+}
+
+.navButton {
+  margin-left: 10px;
+}
