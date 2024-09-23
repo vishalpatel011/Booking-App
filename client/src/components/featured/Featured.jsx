@@ -1,15 +1,19 @@
 import useFetch from "../../hooks/useFetch";
 import "./featured.css";
 
+const API_BASE_URL = "https://booking-app-backend-5ion.onrender.com"; // Add this line
+
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=Mumbai,Pune,Ahmedabad"
+    `${API_BASE_URL}/hotels/countByCity?cities=Mumbai,Pune,Ahmedabad` // Modified this line
   );
 
   return (
     <div className="featured">
       {loading ? (
         "Loading please wait"
+      ) : error ? ( // Add error handling
+        "An error occurred. Please try again later."
       ) : (
         <>
           <div className="featuredItem">

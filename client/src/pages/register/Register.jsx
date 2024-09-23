@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../config"; // Add this import
 import "./register.css";
 
 const Register = () => {
@@ -45,10 +46,10 @@ const Register = () => {
         img: imgUrl,
       };
 
-      await axios.post("/auth/register", newUser);
+      await axios.post(`${API_BASE_URL}/auth/register`, newUser); // Modified this line
       navigate("/login");
     } catch (err) {
-      setError(err.response.data.message || "An error occurred during registration.");
+      setError(err.response?.data?.message || "An error occurred during registration.");
     }
   };
 

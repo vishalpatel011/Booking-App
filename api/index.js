@@ -9,7 +9,6 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 const app = express();
-const port = process.env.PORT || 3000;
 dotenv.config();
 
 const connect = async () => {
@@ -26,7 +25,10 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
-app.use(cors())
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  credentials: true
+}));
 app.use(cookieParser())
 app.use(express.json());
 
@@ -46,7 +48,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(port, () => {
+const PORT = process.env.PORT || 8800;
+
+app.listen(PORT, () => {
   connect();
-  console.log("Connected to backend.");
+  console.log(`Connected to backend on port ${PORT}.`);
 });

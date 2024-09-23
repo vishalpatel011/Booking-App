@@ -2,16 +2,18 @@ import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { API_BASE_URL } from "../../config"; // Add this import
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AuthContext);
 
   const handleLoginClick = () => {
-    navigate("/login"); // Redirect to the login page on button click
+    window.location.href = `${API_BASE_URL}/auth/login`;
   };
+
   const handleRegisterClick = () => {
-    navigate("/register");
+    window.location.href = `${API_BASE_URL}/auth/register`;
   };
 
   const handleLogoutClick = () => {
