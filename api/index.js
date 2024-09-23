@@ -37,6 +37,12 @@ app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 
+// Add these lines to handle requests without the /api prefix
+app.use("/auth", authRoute);
+app.use("/users", usersRoute);
+app.use("/hotels", hotelsRoute);
+app.use("/rooms", roomsRoute);
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
