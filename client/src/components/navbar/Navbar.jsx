@@ -9,11 +9,11 @@ const Navbar = () => {
   const { user, dispatch } = useContext(AuthContext);
 
   const handleLoginClick = () => {
-    window.location.href = `${API_BASE_URL}/auth/login`;
+    navigate("/login");
   };
 
   const handleRegisterClick = () => {
-    window.location.href = `${API_BASE_URL}/auth/register`;
+    navigate("/register");
   };
 
   const handleLogoutClick = () => {
