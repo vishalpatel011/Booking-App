@@ -7,11 +7,11 @@ import { useContext, useState } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { API_BASE_URL } from "../../config"; // Add this import
+import { API_BASE_URL } from "../../config";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading, error } = useFetch(`${API_BASE_URL}/hotels/room/${hotelId}`); // Modified this line
+  const { data, loading, error } = useFetch(`${API_BASE_URL}/api/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
   const getDatesInRange = (startDate, endDate) => {
@@ -56,7 +56,7 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`${API_BASE_URL}/rooms/availability/${roomId}`, { // Modified this line
+          const res = axios.put(`${API_BASE_URL}/api/rooms/availability/${roomId}`, {
             dates: alldates,
           });
           return res.data;
@@ -79,9 +79,7 @@ const Reserve = ({ setOpen, hotelId }) => {
         />
         <span>Select your rooms:</span>
         {loading ? (
-          "Loading..."
-        ) : error ? (
-          "An error occurred. Please try again later."
+          "loading"
         ) : (
           data.map((item) => (
             <div className="rItem" key={item._id}>
@@ -93,19 +91,17 @@ const Reserve = ({ setOpen, hotelId }) => {
                 </div>
                 <div className="rPrice">{item.price}</div>
               </div>
-              <div className="rSelectRooms">
-                {item.roomNumbers.map((roomNumber) => (
-                  <div className="room">
-                    <label>{roomNumber.number}</label>
-                    <input
-                      type="checkbox"
-                      value={roomNumber._id}
-                      onChange={handleSelect}
-                      disabled={!isAvailable(roomNumber)}
-                    />
-                  </div>
-                ))}
-              </div>
+              {item.roomNumbers.map((roomNumber) => (
+                <div className="room" key={roomNumber._id}>
+                  <label>{roomNumber.number}</label>
+                  <input
+                    type="checkbox"
+                    value={roomNumber._id}
+                    onChange={handleSelect}
+                    disabled={!isAvailable(roomNumber)}
+                  />
+                </div>
+              ))}
             </div>
           ))
         )}
