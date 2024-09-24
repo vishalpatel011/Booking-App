@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
-
-const API_BASE_URL = "https://booking-app-backend-5ion.onrender.com"; // Add this line
+import { API_BASE_URL } from "../../config";
 
 const FeaturedProperties = () => {
   const [data, setData] = useState([]);
@@ -12,7 +13,7 @@ const FeaturedProperties = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("/api/hotels?featured=true&limit=4");
+        const res = await axios.get(`${API_BASE_URL}/api/hotels?featured=true&limit=4`);
         setData(res.data);
       } catch (err) {
         setError(err);
