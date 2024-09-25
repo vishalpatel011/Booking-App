@@ -75,6 +75,7 @@
 @media screen and (max-width: 768px) {
   .mobileMenuToggle {
     display: block;
+    z-index: 1000;
   }
 
   .navItems {
@@ -85,24 +86,25 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 50px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .navButton {
-    margin: 10px 0;
+    margin: 5px 0;
+    background-color: transparent;
+    color: #003580;
+    border: 1px solid #003580;
+    transition: background-color 0.3s, color 0.3s;
   }
 
-  .mobileMenuToggle {
-    z-index: 1000;
-  }
-
-  .navItems.mobileMenuOpen {
-    z-index: 999;
-    width: 100%;
-    top: 50px;
+  .navButton:hover {
+    background-color: #003580;
+    color: white;
   }
 }
