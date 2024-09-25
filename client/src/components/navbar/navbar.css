@@ -35,8 +35,8 @@
   border-radius: 5px;
 }
 .navButton:hover{
-  color: #114fa4;
-  background-color: white;
+  color: white;
+  background-color: #003580;
 }
 
 .mobileMenuToggle {

@@ -47,7 +47,7 @@ const Navbar = () => {
           {user ? (
             <div className="userContainer">
               <span className="greeting">Hello, {user.username}</span>
-              <button className="logoutButton" onClick={handleLogoutClick}>LogOut</button>
+              <button className="navButton" onClick={handleLogoutClick}>LogOut</button>
             </div>
           ) : (
             <>
