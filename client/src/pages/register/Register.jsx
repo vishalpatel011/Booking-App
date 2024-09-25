@@ -116,6 +116,9 @@ const Register = () => {
           Register
         </button>
         {error && <span className="error">{error}</span>}
+        <p className="alreadyUser">
+          Already a user? <span onClick={() => navigate("/login")}>Login here</span>
+        </p>
       </div>
     </div>
   );

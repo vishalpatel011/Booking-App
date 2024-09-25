@@ -54,6 +54,9 @@ const Login = () => {
           Login
         </button>
         {error && <span>{error.message}</span>}
+        <p className="createAccount">
+          Don't have an account? <span onClick={() => navigate("/register")}>Create a new account</span>
+        </p>
       </div>
     </div>
   );

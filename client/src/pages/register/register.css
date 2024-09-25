@@ -98,3 +98,19 @@
     font-size: 12px;
     margin-left: 5px;
   }
+  
+  .alreadyUser {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .alreadyUser span {
+    color: #0071c2;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .alreadyUser span:hover {
+    color: #005fa3;
+  }

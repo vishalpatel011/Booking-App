@@ -53,3 +53,19 @@
   margin-bottom: 20px; /* Adjust the margin as needed */
   text-align: center; /* Center the text */
 }
+
+.createAccount {
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.createAccount span {
+  color: #0071c2;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.createAccount span:hover {
+  color: #005fa3;
+}

@@ -19,6 +19,10 @@ import { AuthContext } from "../../context/AuthContext";
 import { API_BASE_URL } from "../../config"; // Add this import
 
 const Header = ({ type }) => {
+  const handleRegisterClick = () => {
+    navigate("/register");
+  };
+
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
   const [dates, setDates] = useState([
@@ -93,8 +97,8 @@ const Header = ({ type }) => {
               more with a free booking account
             </p>
             {!user && (
-              <button className="headerBtn" onClick={() => navigate(`${API_BASE_URL}/auth/login`)}>
-                Sign in / Register
+              <button className="headerBtn" onClick={handleRegisterClick}>
+                Create an account
               </button>
             )}
             <div className="headerSearch">
