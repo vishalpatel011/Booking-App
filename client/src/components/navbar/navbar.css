@@ -3,6 +3,7 @@
   background-color: #003580;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .navContainer {
@@ -18,52 +19,19 @@
   font-weight: 500;
 }
 
-.userSection {
+.navItems {
   display: flex;
   align-items: center;
 }
 
-.greeting, .navButton {
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  color: #ffffff;
-  background-color: #024198ed;
-  border-radius: 20px;
-  font-weight: bold;
-  margin-right: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.greeting:hover, .navButton:hover {
-  background-color: #024098;
-}
-
-.username {
-  background-color: #ffffff;
-  color: #003580;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.logoutButton, .navButton {
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  color: #003580;
-  background-color: #ffffff;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.logoutButton:hover, .navButton:hover {
-  background-color: #e7e4dce7;
-}
-
 .navButton {
-  margin-left: 10px;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .mobileMenuToggle {
@@ -73,35 +41,44 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-
   .mobileMenuToggle {
     display: block;
-    z-index: 1000;
   }
 
   .navItems {
     display: none;
-  }
-
-  .navItems.mobileMenuOpen {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 50px;
     left: 0;
     right: 0;
-    background-color: rgba(0, 53, 128, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #003580;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .navItems.mobileMenuOpen {
+    display: flex;
   }
 
   .navButton {
     margin: 10px 0;
     width: 100%;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+
+  .navbar + * {
+    transition: margin-top 0.3s ease;
+  }
+
+  .navbar.mobileMenuOpen + * {
+    margin-top: 120px;
   }
 }
