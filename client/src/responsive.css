@@ -1,0 +1,79 @@
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navItems {
+    margin-top: 10px;
+  }
+
+  .headerSearch {
+    flex-direction: column;
+  }
+
+  .headerSearchItem {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .featured {
+    flex-direction: column;
+  }
+
+  .featuredItem {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .fp {
+    flex-direction: column;
+  }
+
+  .fpItem {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mailInput {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .fLists {
+    width: 100%;
+  }
+
+  .fList {
+    margin-bottom: 20px;
+  }
+
+  .hotelWrapper {
+    flex-direction: column;
+  }
+
+  .hotelImgWrapper {
+    width: 100%;
+  }
+
+  .hotelDetailsTexts {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hotelDetailsPrice {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .slider {
+    display: none;
+  }
+}

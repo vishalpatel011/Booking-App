@@ -65,3 +65,34 @@
 .navButton {
   margin-left: 10px;
 }
+
+.mobileMenuToggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileMenuToggle {
+    display: block;
+  }
+
+  .navItems {
+    display: none;
+  }
+
+  .navItems.mobileMenuOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navButton {
+    margin: 10px 0;
+  }
+}

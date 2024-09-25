@@ -5,13 +5,41 @@
   margin-top: 20px;
 }
 
-.hotelWrapper {
-  width: 100%;
-  max-width: 1024px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
+@media screen and (max-width: 768px) {
+  .hotelWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+
+  .hotelImg {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .hotelDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .hotelDetailsTexts {
+    flex: 1;
+  }
+
+  .hotelDetailsPrice {
+    flex: 1;
+    background-color: #ebf3ff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .bookNow {
