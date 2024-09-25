@@ -1,21 +1,27 @@
 @media screen and (max-width: 768px) {
-  .navbar {
-    padding: 10px;
+  body {
+    overflow-x: hidden;
+  }
+
+  .container, .headerContainer, .listWrapper, .hotelContainer {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .navbar, .header, .featured, .propertyList, .featuredProperties, .mailList, .footer {
+    padding: 15px;
   }
 
   .navContainer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navItems {
-    margin-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .headerSearch {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px;
+    position: static;
+    margin-top: 20px;
   }
 
   .headerSearchItem {
@@ -27,104 +33,52 @@
     width: 100%;
   }
 
-  .featured {
+  .featured, .propertyList, .featuredProperties {
     flex-direction: column;
   }
 
-  .featuredItem {
+  .featuredItem, .pListItem, .fpItem {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .fp {
-    flex-direction: column;
+  .featuredImg, .pListImg, .fpImg {
+    height: 200px;
+    object-fit: cover;
   }
 
-  .fpItem {
-    width: 100%;
+  .listSearch {
+    position: static;
     margin-bottom: 20px;
   }
 
-  .mailInput {
+  .listResult {
     width: 100%;
   }
 
-  .footer {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .fLists {
+  .searchItem {
     flex-direction: column;
   }
 
-  .fList {
+  .siImg {
     width: 100%;
-    margin-bottom: 20px;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .siDesc, .siDetails {
+    padding: 10px 0;
   }
 
   .hotelWrapper {
     flex-direction: column;
   }
 
-  .hotelImgWrapper {
+  .hotelImgWrapper, .hotelDetailsTexts, .hotelDetailsPrice {
     width: 100%;
-  }
-
-  .hotelDetailsTexts {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .hotelDetailsPrice {
-    position: static;
-    margin-top: 20px;
   }
 
   .slider {
     display: none;
   }
-
-  .pList {
-    flex-direction: column;
-  }
-
-  .pListItem {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .date {
-    top: 60px;
-    left: 0;
-    right: 0;
-  }
-
-  .options {
-    top: 60px;
-    left: 0;
-    right: 0;
-  }
-}
-
-.container {
-  max-width: 100%;
-  padding: 0 10px;
-}
-
-.listContainer {
-  flex-direction: column;
-}
-
-.listWrapper {
-  width: 100%;
-}
-
-.searchItem {
-  flex-direction: column;
-}
-
-.siImg {
-  width: 100%;
-  height: 200px;
 }
