@@ -49,9 +49,9 @@
   position: absolute;
   right: 0;
   border: none;
-  padding: 10px 20px;
   background-color: #0071c2;
-  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
