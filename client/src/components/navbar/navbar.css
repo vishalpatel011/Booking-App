@@ -95,4 +95,14 @@
   .navButton {
     margin: 10px 0;
   }
+
+  .mobileMenuToggle {
+    z-index: 1000;
+  }
+
+  .navItems.mobileMenuOpen {
+    z-index: 999;
+    width: 100%;
+    top: 50px;
+  }
 }
