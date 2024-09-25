@@ -39,7 +39,7 @@
 }
 
 .headerBtn {
-  background-color: #003580;
+  background-color: #024098;
   color: white;
   font-weight: 500;
   border: none;
@@ -48,7 +48,7 @@
 }
 .headerBtn:hover{
   color: white;
-  background-color: #003580;
+  background-color: #024098;
 }
 
 .headerSearch {
