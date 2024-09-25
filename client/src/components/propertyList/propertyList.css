@@ -38,3 +38,18 @@
   padding: 1px;
   font-weight: 300;
 }
+
+@media screen and (max-width: 768px) {
+  .pList {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+
+  .pListItem {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}

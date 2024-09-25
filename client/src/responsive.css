@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+    width: 100%;
   }
 
   .container, .headerContainer, .listWrapper, .hotelContainer {
@@ -80,5 +81,25 @@
 
   .slider {
     display: none;
+  }
+
+  .fp, .pList {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 20px;
+  }
+
+  .fpItem, .pListItem {
+    display: inline-block;
+    width: 80%;
+    white-space: normal;
+    vertical-align: top;
+    margin-right: 15px;
+  }
+
+  .fpImg, .pListImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
 }

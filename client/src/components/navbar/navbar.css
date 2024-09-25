@@ -22,16 +22,21 @@
 .navItems {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .navButton {
-  margin-left: 20px;
+  margin-left: 10px;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   color: #003580;
   background-color: white;
   border-radius: 5px;
+}
+.navButton:hover{
+  color: #114fa4;
+  background-color: white;
 }
 
 .mobileMenuToggle {
@@ -84,7 +89,7 @@
 }
 
 @media screen and (min-width: 769px) {
-  .navButton {
+  .navButton, .logoutButton {
     color: #ffffff;
     background-color: #024198ed;
     border-radius: 20px;
@@ -92,7 +97,13 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
-  .navButton:hover {
+  .navButton:hover, .logoutButton:hover {
     background-color: #024098;
+  }
+
+  .greeting {
+    background-color: #024198ed;
+    padding: 5px 10px;
+    border-radius: 20px;
   }
 }
