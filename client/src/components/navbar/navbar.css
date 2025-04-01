@@ -1,0 +1,109 @@
+.navbar {
+  height: 50px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navButton {
+  margin-left: 10px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+  background-color: white;
+  border-radius: 5px;
+}
+.navButton:hover{
+  color: white;
+  background-color: #003580;
+}
+
+.mobileMenuToggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileMenuToggle {
+    display: block;
+  }
+
+  .navItems {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #003580;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .navItems.mobileMenuOpen {
+    display: flex;
+  }
+
+  .navButton {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+
+  .navbar + * {
+    transition: margin-top 0.3s ease;
+  }
+
+  .navbar.mobileMenuOpen + * {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navButton, .logoutButton {
+    color: #ffffff;
+    background-color: #024198ed;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navButton:hover, .logoutButton:hover {
+    background-color: #024098;
+  }
+
+  .greeting {
+    background-color: #024198ed;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+}

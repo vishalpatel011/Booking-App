@@ -1,0 +1,55 @@
+.login {
+  background-image: url(https://img.freepik.com/free-vector/flat-design-travel-background_23-2149193475.jpg?w=2000);
+
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px; /* Adjust the width as needed */
+  padding: 20px; /* Adjust the padding as needed */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.lInput{
+  height: 30px;
+  padding: 10px;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height to center vertically */
+}
+
+.loginPage h2 {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #333; /* Adjust the color as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  text-align: center; /* Center the text */
+}
