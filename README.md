@@ -92,12 +92,6 @@ Make sure to set up the following environment variables:
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 👥 Authors
-- Your Name - Initial work
+- Vishal Patel
 
-## 🙏 Acknowledgments
-- Thanks to all contributors who have helped shape this project
-- Special thanks to the open-source community
