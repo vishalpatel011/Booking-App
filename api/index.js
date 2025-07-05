@@ -10,6 +10,7 @@ import cors from "cors";
 
 const app = express();
 dotenv.config();
+const allowedOrigins = ['https://booking-app-frontend-6b7p.onrender.com'];
 
 const connect = async () => {
   try {
@@ -25,10 +26,16 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
+const allowedOrigins = [
+  "https://booking-app-frontend-6b7p.onrender.com",
+  "http://localhost:3000"
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  origin: allowedOrigins,
   credentials: true
 }));
+
 app.use(cookieParser())
 app.use(express.json());
 
