@@ -10,7 +10,6 @@ import cors from "cors";
 
 const app = express();
 dotenv.config();
-const allowedOrigins = ['https://booking-app-frontend-6b7p.onrender.com'];
 
 const connect = async () => {
   try {
